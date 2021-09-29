@@ -28,7 +28,7 @@ The hierarchy of the folders within the dataset is provided in the image below. 
 
 This repository includes the following resources:
 
-1. Calibration/Transformation of each sensor with respect to the rear axel of Gator. (calibration.xml)
+1. Calibration/Transformation of each sensor with respect to the rear axel of Gator. ([config_hardware.xml](https://github.com/HannanEjazKeen/TUKCampusDataset/blob/main/config_hardware.xml))
 2. Ground truth trajectories for each sequence in dataset. (ground_truth)
 3. Sample data files files in the format of jpg and pcd. ([sample_data](https://github.com/HannanEjazKeen/TUKCampusDataset/tree/main/sample_data)). This folder also include sample labeled data.
 4. Sample codes to read the .bin and .jpg files and draw trajectory for read-to-use purpose (codes)
