@@ -18,8 +18,7 @@ Here is a short comparison to provide the novality of our dataset.
 
 
 The sensor configuration is provided in following image.
-
-
+![alt text](https://github.com/HannanEjazKeen/TUKCampusDataset/blob/main/etc/sensor_configuration.png)
 
 This repository includes the following resources:
 
