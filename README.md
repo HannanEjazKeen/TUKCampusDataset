@@ -18,7 +18,13 @@ Here is a short comparison to provide the novality of our dataset.
 
 
 The sensor configuration is provided in following image.
+
 ![alt text](https://github.com/HannanEjazKeen/TUKCampusDataset/blob/main/etc/sensor_configuration.png)
+
+
+The hierarchy of the folders within the dataset is provided in the image below. Each sequence starts with *tuk* with sequence number.
+
+![alt text](https://github.com/HannanEjazKeen/TUKCampusDataset/blob/main/etc/dataset_hierarchy.png)
 
 This repository includes the following resources:
 
