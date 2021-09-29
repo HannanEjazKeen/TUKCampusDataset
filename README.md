@@ -35,6 +35,10 @@ This repository includes the following resources:
 5. Evaluation results over several algorithm ([evaluation](https://github.com/HannanEjazKeen/TUKCampusDataset/tree/main/evaluation))
 6. Finally some resource from the paper is also available for citation purposes ([etc](https://github.com/HannanEjazKeen/TUKCampusDataset/tree/main/etc))
 
+<p align="center">
+  <img src="laser_images.gif" alt="Laser Sensor Images"/>
+</p>
+
 For complete data, please [email](mailto:keen@cs.uni-kl.de?subject=[TUK]%20Campus%20Dataset%20Request) and you will receive an reply-email which will include a link to the dataset.
 
 Our [group](https://agrosy.informatik.uni-kl.de/en/) has 20 years of experience in the field of autonomous mobile robotics. For further information, we keep updating our campus [dataset page](https://agrosy.informatik.uni-kl.de/en/research/data-sets/tuk-campus).
