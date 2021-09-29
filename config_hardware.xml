@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<node name="hardware">
+		<node name="point_grey_bumblebee_xb3">
+			<value name="camera_guid">49712223536076182</value>
+			<value name="wide_baseline_only">true</value>
+			<value name="position">(1.2, 0.13, 1.70257, -95.11°,0.0°,-90.0°)</value>
+			<value name="manual_exposure">true</value>
+			<value name="exposure_value">200</value>
+			<value name="overlay">true</value>
+		</node>
+		<node name="bumblebee_xb3_undistort_rectify">
+			<value name="remap_matrices_file">$FINROC_HOME/resources/camera/calibration_files/bumblebee_x3_color/bumblebee_14472598_640x480_wide.yml</value>
+		</node>
+		<node name="point_grey_bumblebee_xb3_point_cloud">
+			<value name="extrinsics_config" ref="/hardware/bumblebee_xb3_undistort_rectify/remap_matrices_file"/>
+			<value name="stereo_algorithm">SGBM</value>
+			<value name="pre_filter_size">31</value>
+			<value name="pre_filter_cap">31</value>
+			<value name="sad_window_size">9</value>
+			<value name="number_of_disparities">64</value>
+			<value name="texture_threshold">10</value>
+			<value name="uniqueness_ratio">30</value>
+			<value name="speckle_window_size">100</value>
+			<value name="speckle_range">32</value>
+			<value name="skip_points">1</value>
+		</node>
+		<node name="point_grey_bumblebee_x2">
+            <value name="camera_guid">49712223535903597</value>
+            <value name="wide_baseline_only">true</value>
+            <value name="position">(1.3, 0.06, 1.90475, -95.11°,0.0°,-90.0°)</value>
+            <value name="manual_exposure">true</value>
+            <value name="exposure_value">200</value>
+            <value name="overlay">true</value>
+        </node>
+		<node name="bumblebee_x2_undistort_rectify">
+            <value name="remap_matrices_file">$FINROC_HOME/resources/camera/calibration_files/bumblebee_xb2_color/bumblebee_14300013_640x480.yml</value>
+        </node>
+		<node name="point_grey_bumblebee_x2_point_cloud">
+            <value name="extrinsics_config" ref="/hardware/bumblebee_x2_undistort_rectify/remap_matrices_file"/>
+            <value name="stereo_algorithm">SGBM</value>
+            <value name="pre_filter_size">31</value>
+            <value name="pre_filter_cap">31</value>
+            <value name="sad_window_size">9</value>
+            <value name="number_of_disparities">64</value>
+            <value name="texture_threshold">10</value>
+            <value name="uniqueness_ratio">30</value>
+            <value name="speckle_window_size">100</value>
+            <value name="speckle_range">32</value>
+            <value name="skip_points">1</value>
+        </node>
+		
+		<node name="scanners">
+			<node name="front_lrf_sick_lms_151">
+				<value name="type">LMS1XX</value>
+				<value name="device_file">192.168.1.20</value>
+				<node name="output">
+					<value name="format">eDF_POLAR_2D_FLOAT</value>
+					<value name="unit">M</value>
+				</node>
+				<value name="pose">(2.4,0.0,0.24,0.0°,0.0°,0.0°)</value>
+				<node name="configuration">
+					<value name="use_start_angle">1</value>
+					<value name="start_angle">-135°</value>
+					<value name="angle_of_vision">270°</value>
+					<value name="angular_resolution">0.5</value>
+					<value name="flip_scan">true</value>
+				</node>
+			</node> <!-- front -->
+			<node name="rear_lrf_sick_lms_151">
+				<value name="type">LMS1XX</value>
+				<value name="device_file">192.168.1.23</value>
+				<node name="output">
+					<value name="format">eDF_POLAR_2D_FLOAT</value>
+					<value name="unit">M</value>
+				</node>
+				<!-- <value name="pose">(0.0,0.0,0.0,0.0°,0.0°,0.0°)</value> -->
+				<value name="pose">(-0.54,0.29,0.50,0.0°,0.0°,180.0°)</value>
+				<node name="configuration">
+					<value name="use_start_angle">1</value>
+					<value name="start_angle">-135°</value>
+					<value name="angle_of_vision">270°</value>
+					<value name="angular_resolution">0.5</value>
+					<value name="flip_scan">true</value>
+				</node>
+			</node> <!-- rear -->
+			<node name="left_lrf_sick_lms_151">
+				<value name="type">LMS1XX</value>
+				<value name="device_file">192.168.1.21</value>
+				<node name="output">
+					<value name="format">eDF_POLAR_2D_FLOAT</value>
+					<value name="unit">M</value>
+				</node>
+				<!-- <value name="pose">(0.0,0.0,0.0,0.0°,0.0°,0.0°)</value> -->
+				<value name="pose">(1.10,0.67,1.97,79.0°,2.0°,-90.0°)</value>
+				<node name="configuration">
+					<value name="use_start_angle">1</value>
+					<value name="start_angle">-135°</value>
+					<value name="angle_of_vision">270°</value>
+					<value name="angular_resolution">0.5</value>
+					<value name="flip_scan">false</value>
+				</node>
+			</node> <!-- left -->
+			<node name="right_lrf_sick_lms_151">
+				<value name="type">LMS1XX</value>
+				<value name="device_file">192.168.1.22</value>
+				<node name="output">
+					<value name="format">eDF_POLAR_2D_FLOAT</value>
+					<value name="unit">M</value>
+				</node>
+				<!-- <value name="pose">(0.0,0.0,0.0,0.0°,0.0°,0.0°)</value> -->
+				<value name="pose">(1.03,-0.69,1.99,-73.0°,3.0°,90.0°)</value>
+				<node name="configuration">
+					<value name="use_start_angle">1</value>
+					<value name="start_angle">-135°</value>
+					<value name="angle_of_vision">270°</value>
+					<value name="angular_resolution">0.5</value>
+					<value name="flip_scan">false</value>
+				</node>
+			</node> <!-- right -->
+            <node name="rear_ground_lrf_sick_lms_151">
+                <value name="type">LMS1XX</value>
+                <value name="device_file">192.168.1.24</value>
+                <node name="output">
+                    <value name="format">eDF_POLAR_2D_FLOAT</value>
+                    <value name="unit">M</value>
+                </node>
+                <value name="pose">(-0.50,-0.22,0.62,0.0°,-90.0°,180°)</value>
+                <node name="configuration">
+                    <value name="use_start_angle">1</value>
+                    <value name="start_angle">-135°</value>
+                    <value name="angle_of_vision">270°</value>
+                    <value name="angular_resolution">0.25</value>
+                    <value name="flip_scan">true</value>
+                </node>
+            </node> <!-- rear ground -->
+		</node>
+	</node> <!-- scanners -->
+	<node name="hardware_abstraction">
+		<value name="min_vel"> 0.5 </value>
+		<value name="max_r_vel">-7.0</value> <!-- -7.59722222 according to data sheet -->
+		<value name="max_lf_vel"> 6.5 </value> <!-- 6.705611111 according to data sheet -->
+		<value name="max_hf_vel"> 13.5 </value> <!-- 14.30527778 according to data sheet -->
+		<value name="turning_radius"> 4.0 </value> <!-- 3.77 according to data sheet -->
+	</node>
+	<node name="vehicle_data">
+		<value name="mass"> 771.11 </value>
+		<value name="length"> 3.0 </value>
+		<value name="width"> 1.5748 </value>
+		<value name="front_axle_base"> 1.3 </value>
+		<value name="rear_axle_base"> 1.3 </value>
+		<value name="wheel_base"> 2.0 </value>
+		<value name="wheel_radius">0.31</value>
+		<value name="front_protrusion"> 0.4 </value>
+		<value name="rear_protrusion"> 0.4 </value>
+		<value name="min_turning_radius"> 3.77952 </value>
+		<value name="max_steering_angle"> 0.529 </value>
+		<value name="max_acceleration">5.0</value>
+		<value name="max_velocity">10.0</value>
+		<value name="min_velocity">0.5</value>
+		<value name="max_angular_acceleration">1.5</value>
+		<value name="max_heading_rate">1.5</value>
+	</node>
+	<node name="sensors">
+		
+		<node name="gnss_0">
+			<value name="sensor_data_target_sigma">(5.0,5.0,5.0)</value>
+			<value name="gnss_target_sigma">(5.0,5.0,5.0)</value>
+			<value name="sensor_data_sigma">(0.025,0.025,0.025)</value>
+			<value name="sigma_dimension">3</value>
+			<value name="noise_x_sigma">0.025</value>
+			<value name="noise_y_sigma">0.025</value>
+			<value name="noise_z_sigma">0.025</value>
+			<value name="filter_factor">1</value>
+			<value name="sensor_pose">(0.69,0.0,1.55,0.0°,0.0°,0.0°)</value> <!-- to kinematic center -->
+		</node>
+		<node name="gnss_1">
+			<value name="sensor_data_target_sigma">(5.0,5.0,5.0)</value>
+			<value name="gnss_target_sigma">(5.0,5.0,5.0)</value>
+			<value name="sensor_data_sigma">(1.0, 1.0, 1.0)</value>
+			<value name="sigma_dimension">3</value>
+			<value name="noise_x_sigma">1</value>
+			<value name="noise_y_sigma">1</value>
+			<value name="noise_z_sigma">1</value>
+			<value name="filter_factor">1</value>
+			<value name="sensor_pose">(0.69,0.38,1.55,0.0°,0.0°,0.0°)</value> <!-- to kinematic center -->
+		</node>
+		<node name="stereo_camera_1"> <!-- bumblebee_xb3 -->
+			<value name="sensor_data_sigma">(10, 10)</value>
+			<value name="sensor_data_target_sigma">(10,10)</value>
+			<value name="images_target_sigma">(10,10)</value>
+			<value name="sigma_dimension">2</value>
+			<value name="sensor_data_sigma">(10, 10)</value>
+			<value name="sensor_data_target_sigma">(10,10)</value>
+			<value name="images_target_sigma">(10,10)</value>
+			<value name="sigma_dimension">2</value>
+			<value name="block_size_cols">8</value>
+			<value name="block_size_rows">6</value>
+			<value name="threshold_white">230</value>
+			<value name="threshold_black">25</value>
+			<value name="percentage_exposed_pixel_per_block">0.6</value>
+			<value name="percentage_blooming_pixel_per_column">0.8</value>
+			<value name="enable_blooming_column_check">true</value>
+			<node name="point_cloud">
+				<node name="sensor">
+					<value name="sensor_data_sigma">(0.5)</value>
+					<value name="sensor_data_target_sigma">(0.5)</value>
+					<value name="distance_data_target_sigma">(0.5)</value>
+					<value name="sigma_dimension">1</value>
+				</node>
+				<node name="remove_clutter">
+					<value name="desired_volume">(-35, -35, -5);(35, 35, 35)</value>
+					<value name="remove_volumes">
+						<value>
+							<element>(0, 0, 0);(0, 0, 0)</element>
+						</value>
+					</value>
+				</node>
+				<node name="down_sample">
+					<value name="leaf_size">0.05</value>
+				</node>
+				<node name="transform">
+					<value name="fixed_pose" ref="/hardware/point_grey_bumblebee_xb3/position" /> <!-- bumblebee_xb3 pose -->
+					<value name="pose_mode">(0)</value>
+				</node>
+			</node>
+		</node>
+			<node name="stereo_camera_0"> <!-- bumblebee_x2 -->
+			<value name="sensor_data_sigma">(10, 10)</value>
+			<value name="sensor_data_target_sigma">(10,10)</value>
+			<value name="images_target_sigma">(10,10)</value>
+			<value name="sigma_dimension">2</value>
+			<value name="sensor_data_sigma">(10, 10)</value>
+			<value name="sensor_data_target_sigma">(10,10)</value>
+			<value name="images_target_sigma">(10,10)</value>
+			<value name="sigma_dimension">2</value>
+			<value name="block_size_cols">8</value>
+			<value name="block_size_rows">6</value>
+			<value name="threshold_white">230</value>
+			<value name="threshold_black">25</value>
+			<value name="percentage_exposed_pixel_per_block">0.6</value>
+			<value name="percentage_blooming_pixel_per_column">0.8</value>
+			<value name="enable_blooming_column_check">true</value>
+			<node name="point_cloud">
+				<node name="sensor">
+					<value name="sensor_data_sigma">(0.5)</value>
+					<value name="sensor_data_target_sigma">(0.5)</value>
+					<value name="distance_data_target_sigma">(0.5)</value>
+					<value name="sigma_dimension">1</value>
+				</node>
+				<node name="remove_clutter">
+					<value name="desired_volume">(-35, -35, -5);(35, 35, 35)</value>
+					<value name="remove_volumes">
+						<value>
+							<element>(0, 0, 0);(0, 0, 0)</element>
+						</value>
+					</value>
+				</node>
+				<node name="down_sample">
+					<value name="leaf_size">0.05</value>
+				</node>
+				<node name="transform">
+					<value name="fixed_pose" ref="/hardware/point_grey_bumblebee_x2/position" /> <!-- bumblebee_x2 pose -->
+					<value name="pose_mode">(0)</value>
+				</node>
+			</node>
+		</node>
+		<node name="stereo_camera_2"> <!-- vislab -->
+		    <value name="sensor_data_sigma">(10, 10)</value>
+		    <value name="sensor_data_target_sigma">(10,10)</value>
+		    <value name="images_target_sigma">(10,10)</value>
+		    <value name="sigma_dimension">2</value>
+		    <value name="sensor_data_sigma">(10, 10)</value>
+		    <value name="sensor_data_target_sigma">(10,10)</value>
+		    <value name="images_target_sigma">(10,10)</value>
+		    <value name="sigma_dimension">2</value>
+		    <value name="block_size_cols">8</value>
+		    <value name="block_size_rows">6</value>
+		    <value name="threshold_white">230</value>
+		    <value name="threshold_black">25</value>
+		    <value name="percentage_exposed_pixel_per_block">0.6</value>
+		    <value name="percentage_blooming_pixel_per_column">0.8</value>
+		    <value name="enable_blooming_column_check">true</value>
+		    <node name="point_cloud">
+			<node name="sensor">
+			    <value name="sensor_data_sigma">(0.5)</value>
+			    <value name="sensor_data_target_sigma">(0.5)</value>
+			    <value name="distance_data_target_sigma">(0.5)</value>
+			    <value name="sigma_dimension">1</value>
+			</node>
+			<node name="remove_clutter">
+			    <value name="desired_volume">(-35, -35, -5);(35, 35, 35)</value>
+			    <value name="remove_volumes">
+				<value>
+				    <element>(0, 0, 0);(0, 0, 0)</element>
+				</value>
+			    </value>
+			</node>
+			<node name="down_sample">
+			    <value name="leaf_size">0.05</value>
+			</node>
+			<node name="transform">
+			    <value name="fixed_pose" ref="/hardware/bumblebee_x2/position" /> <!-- vislab pose -->
+			    <value name="pose_mode">(0)</value>
+			</node>
+		    </node>
+		  </node>
+		</node>
+	<node name="perception">
+		<node name="pose">
+			<node name="pose">
+				<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<value name="signal_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<value name="twist_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<value name="pose_2d_target_sigma">(1.0,1.0,0.2)</value>
+				<value name="output_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<node name="time">
+					<value name="data_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				</node>
+				<node name="prediction">
+					<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+					<value name="position_prediction_error_velocity">0.3</value>
+					<value name="orientation_prediction_error_velocity">3</value>
+					<value name="max_acceleration">5.0</value>
+					<value name="max_angular_acceleration">1.5</value>
+					<value name="max_velocity">10.0</value>
+					<value name="max_heading_rate">1.5</value>
+					<value name="max_turning_radius">4.0</value>
+				</node>
+				<node name="position_filter">
+					<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+					<value name="position_filter_factor">0.5</value>
+					<value name="orientation_filter_factor">0.5</value>
+				</node>
+			</node>
+			<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+			<value name="signal_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+			<value name="twist_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+			<value name="pose_2d_target_sigma">(1.0,1.0,0.2)</value>
+			<node name="gnss_0">
+				<value name="gnss_target_sigma">(5.0,5.0,5.0)</value>
+				<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<value name="lla_offset">(49.421749194652485,7.753917574882507,283.921)
+				</value>
+				<value name="auto_determine_lla_offset">false</value>
+				<node name="cs_to_wcs">
+					<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+					<value name="input_coordinate_system">(0.69,0.0,1.55,0.0°,0.0°,0.0°)</value>
+					<value name="output_coordinate_system">(0.69,0.0,1.55,0.0°,0.0°,0.0°)</value>
+				</node>
+			</node>
+			<node name="gnss_1">
+				<value name="gnss_target_sigma">(5.0,5.0,5.0)</value>
+				<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+				<value name="lla_offset">(49.421749194652485,7.753917574882507,283.921)
+				</value>
+				<value name="auto_determine_lla_offset">false</value>
+				<node name="cs_to_wcs">
+					<value name="pose_target_sigma">(1.0,1.0,1.0,0.2,0.2,0.2)</value>
+					<value name="input_coordinate_system">(0.69,0.38,1.55,0.0°,0.0°,0.0°)</value>
+					<value name="output_coordinate_system">(0.69,0.0,1.55,0.0°,0.0°,0.0°)</value>
+				</node>
+			</node>
+			
+			</node>
+</root>
