@@ -33,6 +33,6 @@ This repository includes the following resources:
 3. Sample data files files in the format of jpg and pcd. (sample_data). This folder also include sample labeled data.
 4. Sample codes to read the .bin and .jpg files and draw trajectory for read-to-use purpose (codes)
 5. Evaluation results over several algorithm (evaluation)
-6. Finally some resource from the paper is also available for citation purposes (etc)
+6. Finally some resource from the paper is also available for citation purposes ([etc](https://github.com/HannanEjazKeen/TUKCampusDataset/tree/main/etc))
 
 Our [group](https://agrosy.informatik.uni-kl.de/en/) has 20 years of experience in the field of autonomous mobile robotics. For further information, we keep updating our campus [dataset page](https://agrosy.informatik.uni-kl.de/en/research/data-sets/tuk-campus).
